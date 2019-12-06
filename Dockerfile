@@ -1,0 +1,6 @@
+FROM openjdk 
+COPY /build/libs/CONFIG-SVC-0.0.1-SNAPSHOT.jar /usr/app/ 
+WORKDIR /usr/app 
+RUN sh -c 'touch CONFIG-SVC-0.0.1-SNAPSHOT.jar' 
+EXPOSE 8888 
+ENTRYPOINT ["java","-jar","CONFIG-SVC-0.0.1-SNAPSHOT.jar"] 
